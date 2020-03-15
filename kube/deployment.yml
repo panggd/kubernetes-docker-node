@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-express
+  labels:
+    app: express
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: express
+  template:
+    metadata:
+      labels:
+        app: express
+    spec:
+      containers:
+      - name: kubernetes-docker-node-app
+        image: kubernetes-docker-node_app
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
