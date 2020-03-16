@@ -70,7 +70,7 @@ minikube service app-express
 Here are some housekeeping tips if you are on a low memory resource machine like me.
 
 ```bash
-# This is to have a clean state of your docer environment
+# This is to have a clean state of your docker environment
 docker stop $(docker ps -a -q) && \
 docker container prune && \
 docker volume prune && \
